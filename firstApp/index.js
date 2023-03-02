@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express()
 
-app.use(() => {
+app.use((req, res) => {
     console.log('We got a new Request!');
+    res.send('<h1>Hello, we got your request! This is our response.</h1>');
 })
 //Server is on localhost:3000 //
 app.listen(3000, () => {
