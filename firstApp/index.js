@@ -16,6 +16,12 @@ app.get('/r/:subreddit', (req, res) => {
     res.send(`<h1>Browsing the ${subreddit} subreddit</h1>`)
 })
 
+// Defining Patterns for our Route
+
+app.get('/r/:subreddit/:postId', (req, res) => {
+    const { subreddit, postId } = req.params;
+    res.send(`<h1>Viewing Post Id: ${postId} on the ${subreddit} subreddit </h1>`)
+})
 //example of a POST Request
 
 app.post('/cats', (req, res) => {
